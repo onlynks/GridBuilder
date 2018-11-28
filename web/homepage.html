@@ -1,0 +1,59 @@
+<?php include("structure.html"); ?>
+
+<div class="container mb-5">
+
+
+        <form method="post" action="">
+            <div class="row">
+                <div class="col-md-3">
+                <div class="form-group">
+                    <label for="ray">Ray</label>
+                    <input type="number" class="form-control" id="ray" name="ray" placeholder="Enter grid ray" value="<?php echo empty($_POST['ray'])?'':$_POST['ray']; ?>">
+                </div>
+            </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="sideNumber">Side number</label>
+                        <input type="number" class="form-control" id="sideNumber" name="sideNumber" placeholder="Side number" value="<?php echo empty($_POST['sideNumber'])?'':$_POST['sideNumber']; ?>">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="sliceNumber">Slice number</label>
+                        <input type="number" class="form-control" id="sliceNumber" name="sliceNumber" placeholder="Slice number" value="<?php echo empty($_POST['sliceNumber'])?'':$_POST['sliceNumber']; ?>">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="keptArea">Kept area</label>
+                        <input type="number" class="form-control" id="keptArea" name="keptArea" placeholder="Kept area" value="<?php echo empty($_POST['keptArea'])?'':$_POST['keptArea']; ?>">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-flex justify-content-start col-md-6">
+                    <button type="submit" class="btn btn-primary col-md-2" value="draw">Draw</button>
+                    <div class="col-md-6">
+                        <select class="custom-select mr-sm-2" name="drawKind">
+                            <option selected value="grid">Grid</option>
+                            <option value="points">Points</option>
+                            <option value="both">Both</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end col-md-6">
+                    <button type="submit" class="btn btn-primary mr-3" value="squaresPoints">Squares</button>
+                    <button type="submit" class="btn btn-primary" value="centersPoints">Centers</button>
+                </div>
+            </div>
+        </form>
+
+</div>
+<div class="container-fluid d-flex justify-content-center">
+
+    <img src='polygone.png'>
+
+</div>
